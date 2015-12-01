@@ -1,8 +1,8 @@
 # RUN LOCALLY
 Clone into this reop 'heroku' branch
 
-    git clone -b heroku https://github.com/kobiburnley/youtube-dl.git
-    cd youtube-dl
+    git clone https://github.com/kobiburnley/youtube-dl-stream.git
+    cd youtube-dl-stream
     C:\Python27\python.exe ~/youtube-dl/web.py
 Then in your browser go to http://localhost:5000/?id=koeW4g8Y-lg&formats=251,171
 

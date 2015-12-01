@@ -46,7 +46,6 @@ def stream_media(media_url, start_response):
         yield chuck
 
 
-port = os.environ.get("PORT", "5000")
 def hello_world_app(environ, start_response):
     params = urlparse.parse_qs(environ['QUERY_STRING'])
     video_id = params.get('id', [False])[0]
@@ -68,6 +67,8 @@ def hello_world_app(environ, start_response):
         start_response('200 OK', headers)
         return ['An error occurred.']
 
+
+port = os.environ.get("PORT", "5000")
 httpd = make_server('', int(port), hello_world_app)
 print "Serving HTTP on port " + port + "..."
 
